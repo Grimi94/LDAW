@@ -33,5 +33,22 @@ Store.create!([
     state: "Queretaro",
     description: "This is a short description",
     rating: 4.5
+  },
+  {
+    id:4,
+    name: "Store3",
+    city: "Queretaro",
+    state: "Queretaro",
+    description: "This is a short description",
+    rating: 4.5
+  },
+  {
+    id:5,
+    name: "Store3",
+    city: "Queretaro",
+    state: "Queretaro",
+    description: "This is a short description",
+    rating: 4.5
   }
+  
 ])
