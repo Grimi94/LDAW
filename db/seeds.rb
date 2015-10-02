@@ -11,10 +11,27 @@
 Store.destroy_all
 Store.create!([
   {
+    id: 1,
     name: "Store1",
     city: "Queretaro",
     state: "Queretaro",
     description: "This is a very short description",
+    rating: 4.5
+  },
+  {
+    id:2,
+    name: "Store2",
+    city: "Queretaro",
+    state: "Queretaro",
+    description: "This is a short description",
+    rating: 4.5
+  },
+  {
+    id:3,
+    name: "Store3",
+    city: "Queretaro",
+    state: "Queretaro",
+    description: "This is a short description",
     rating: 4.5
   }
 ])
