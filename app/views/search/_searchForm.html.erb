@@ -1,0 +1,28 @@
+
+<div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="What are you looking for?">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go</button>
+      </span>
+    </div>
+</div><!-- col-->
+
+<div class="col-lg-6">
+        <%= form_tag(search_path, :method => "get", class:'input-group') do %>
+        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "You already know the store?" %>
+        <span class="input-group-btn">
+            <%= button_tag "Go", class: 'btn btn-default' %>
+        </span>
+        <% end %>    
+</div><!-- col-->
+
+<!-- descuentos todavía no... 
+<div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Know about a disccount?">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go</button>
+      </span>
+    </div>
+</div><!-- col -->

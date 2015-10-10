@@ -1,0 +1,39 @@
+<div class="container">
+
+        <div class="row">
+            
+            <%= render 'searchForm' %>
+            
+            <br><br>
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <% if @stores.present? %>
+                      <% @stores.each do |store| %>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x150" alt="">
+                                <div class="caption">
+                                        <h4><%= link_to store.name, store%></h4>
+                                        <p><%= store.description %></p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">12 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                    <% else %>
+                      <p>No existe la(s) tienda(s):  <%= params[:search] %>.</p>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
