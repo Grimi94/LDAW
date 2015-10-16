@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20151013231102) do
 
-  create_table "ratings", force: :cascade do |t|
-    t.integer  "rate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-    t.integer  "store_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.text     "content"
     t.datetime "created_at", null: false
