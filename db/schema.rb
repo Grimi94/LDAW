@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013154055) do
+ActiveRecord::Schema.define(version: 20151013231102) do
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "store_id"
+  end
 
   create_table "reviews", force: :cascade do |t|
     t.text     "content"
@@ -19,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151013154055) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "store_id"
+    t.integer  "ratings"
   end
 
   create_table "stores", force: :cascade do |t|
