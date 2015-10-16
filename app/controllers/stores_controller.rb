@@ -8,5 +8,11 @@ class StoresController < ApplicationController
       format.html # show.html.erb
       format.xml {render :xml => @product}
     end
+    
+    if @reviews.blank?
+      @avg_review = 0
+    else
+      @avg_review = @reviews.average(:ratings).round(2)
+    end
   end
 end
