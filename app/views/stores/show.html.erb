@@ -42,8 +42,9 @@
                             <p>No hay reseñas</p>
                         <% else %>
                             <% @reviews.each do |review| %>
-                                <strong><%= review.user.email %></strong>
-                                <div class="star-rating" data-score= <%= review.ratings %>></div>
+                                <div class="star-rating" data-score= <%= review.ratings %>>
+                                    <strong><%= review.user.email %></strong>
+                                </div>
                                 <span class="pull-right"><%= review.created_at.strftime("%d %b %y at %I:%M%p") %></span>
                                 <p><%= review.content %></p>
                             <%end %>
