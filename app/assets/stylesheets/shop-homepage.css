@@ -42,6 +42,10 @@ body {
     color: #d17581;
 }
 
+.ratings img{
+    width: auto;
+}
+
 .thumbnail {
     padding: 0;
 }

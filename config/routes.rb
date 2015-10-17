@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'userLogged'    => 'static_pages#userLogged'
   get 'edit'    => 'users#edit'
   get 'search' => 'search#search'
-  resources :stores
+  
+  resources :stores do
+    resources :reviews, except: [:show, :index] #para que reviews este detro de stores como /store/movie_id/reviews
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
