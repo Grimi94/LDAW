@@ -21,4 +21,24 @@ class StoresController < ApplicationController
 
   end
   
+  def update
+    @store = Store.find(params[:id])
+    
+    puts store_params
+    
+    params
+      if @store.update_attributes(store_params)
+      
+      flash[:success] = "Profile updated"
+      render 'edit'
+      
+    else
+      render 'edit'
+    end
+  end
+  
+  private
+  def store_params
+    params.require(:store).permit(:name, :city, :state, :description)
+  end
 end
