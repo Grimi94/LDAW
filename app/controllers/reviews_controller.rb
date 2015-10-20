@@ -1,11 +1,15 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  before_action :set_store
+  before_action :set_store, except: [:index]
 
 
   def new
     @review = Review.new
+  end
+  
+  def index
+    @review = Review.where(user_id: current_user.id)
   end
 
   def edit
@@ -31,7 +35,7 @@ class ReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @review.update(review_params)
-        format.html { redirect_to store_reviews_path, notice: 'Review was successfully updated.' }
+        format.html { redirect_to user_reviews_path(current_user), notice: 'Review was successfully updated.' }
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit }
@@ -42,10 +46,11 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-    respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+   
+   # respond_to do |format|
+    #  format.html { redirect_to user_reviews_path(current_user), notice: 'Review was successfully destroyed.' }
+     # format.json { head :no_content }
+    #end
   end
 
   private

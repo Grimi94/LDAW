@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Mis reseñas</h2>
-                <% if @reviews.blank? %>
+                <% if @review.blank? %>
                     <p>No hay reseñas</p>
                 <% else %>
-                    <% @reviews.each do |review| %>
+                    <% @review.each do |review| %>
                         <div class="panel panel-default">
                           <div class="panel-heading">
                             <h3 class="panel-title"><%= link_to review.store.name, review.store%></h3>
@@ -17,8 +17,9 @@
                             <p><%= review.content %></p>
                           </div>
                          <span class="pull-right">
-                             <%= link_to 'Editar', "#"%> |
-                             <%= link_to 'Eliminar', "#"%>
+                             <%= link_to 'Editar', edit_store_review_path(review.store, review)%> |
+                             <%= link_to 'Eliminar', "#", method: :destroy, 
+                             data: { confirm: "¿Seguro que deseas eliminar esta reseña?" } %>
                          </span>
                         </div>
                         
