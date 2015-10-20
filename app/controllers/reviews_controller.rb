@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @review = Review.find(params[:id])
   end
 
   def create
@@ -31,7 +31,7 @@ class ReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @review.update(review_params)
-        format.html { redirect_to @store, notice: 'Review was successfully updated.' }
+        format.html { redirect_to store_reviews_path, notice: 'Review was successfully updated.' }
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit }

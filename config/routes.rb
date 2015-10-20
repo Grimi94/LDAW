@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :stores do
     resources :reviews, except: [:show, :index] #para que reviews este detro de stores como /store/movie_id/reviews
   end
+  
+  resources :users do
+    resources :reviews, only: [:index]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

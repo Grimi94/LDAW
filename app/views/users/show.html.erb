@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Mis reseñas</h2>
+                <% if @reviews.blank? %>
+                    <p>No hay reseñas</p>
+                <% else %>
+                    <% @reviews.each do |review| %>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title"><%= link_to review.store.name, review.store%></h3>
+                          </div>
+                          <div class="panel-body">
+                            <div class="star-rating" data-score= <%= review.ratings %>></div>
+                            <p><%= review.content %></p>
+                          </div>
+                         <span class="pull-right">
+                             <%= link_to 'Editar', "#"%> |
+                             <%= link_to 'Eliminar', "#"%>
+                         </span>
+                        </div>
+                        
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+        
+        <script>
+            $(' .star-rating').raty({
+                path: '/assets/',
+                readOnly: true,
+                score: function() {
+                    return $(this).attr('data-score');
+                }
+            });
+            
+        </script>
+    </div>
+    
+</div>
