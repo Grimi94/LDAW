@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  before_action :set_store, except: [:index]
+  before_action :set_store, except: [:index, :destroy]
 
 
   def new
@@ -46,11 +46,10 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-   
-   # respond_to do |format|
-    #  format.html { redirect_to user_reviews_path(current_user), notice: 'Review was successfully destroyed.' }
-     # format.json { head :no_content }
-    #end
+    respond_to do |format|
+      format.html { redirect_to user_reviews_path(current_user), notice: 'Review was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
