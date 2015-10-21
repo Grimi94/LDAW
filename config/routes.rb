@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   
   resources :users do
-    resources :reviews, only: [:index]
+    resources :reviews, only: [:index, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
