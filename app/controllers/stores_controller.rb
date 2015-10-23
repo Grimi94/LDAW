@@ -32,13 +32,14 @@ class StoresController < ApplicationController
       flash[:success] = "Profile updated"
       render 'edit'
       
-    else
+      else
       render 'edit'
-    end
+      end
   end
   
   private
   def store_params
-    params.require(:store).permit(:name, :city, :state, :description)
+    #params.require(:store).permit(:name, :city, :state, :description)
+    params.require(:store).permit(:name, :city, :state, :description, :image)
   end
 end
