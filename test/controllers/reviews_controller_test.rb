@@ -24,11 +24,6 @@ class ReviewsControllerTest < ActionController::TestCase
     assert_redirected_to review_path(assigns(:review))
   end
 
-  test "should show review" do
-    get :show, id: @review
-    assert_response :success
-  end
-
   test "should get edit" do
     get :edit, id: @review
     assert_response :success

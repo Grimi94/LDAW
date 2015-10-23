@@ -1,4 +1,5 @@
 class SearchController < ApplicationController
+  
   def search
     @stores = Store.all
     if params[:search]
@@ -7,4 +8,5 @@ class SearchController < ApplicationController
     @stores = Store.all.order('created_at DESC')
     end
   end
+  
 end

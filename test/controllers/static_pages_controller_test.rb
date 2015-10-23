@@ -6,9 +6,4 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get userLogged" do
-    get :userLogged
-    assert_response :success
-  end
-
 end
