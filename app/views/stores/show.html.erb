@@ -16,7 +16,8 @@
 
             <div class="thumbnail">
                 <% if @store.image.presence %>
-                    <%= @store.image.url(:large) %>
+                    
+                    <img class="img-responsive" src="<%= @store.image.url %>" alt="">
                 <% else %>
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                 <% end %>
