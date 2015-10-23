@@ -36,7 +36,7 @@ Store.create!([
   },
   {
     id:4,
-    name: "Store3",
+    name: "Store4",
     city: "Queretaro",
     state: "Queretaro",
     description: "This is a short description",
@@ -44,11 +44,10 @@ Store.create!([
   },
   {
     id:5,
-    name: "Store3",
+    name: "Store5",
     city: "Queretaro",
     state: "Queretaro",
     description: "This is a short description",
-    rating: 4.5
   }
   
 ])
