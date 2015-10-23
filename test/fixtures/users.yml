@@ -1,1 +1,4 @@
-
+user1:
+  email: user1@mysite.com
+  encrypted_password: <%= User.new.send(:password_digest, "user123") %>
+  
