@@ -12,42 +12,35 @@ Store.destroy_all
 Store.create!([
   {
     id: 1,
-    name: "Store1",
+    name: "Taqueria Arandas",
     city: "Queretaro",
     state: "Queretaro",
-    description: "This is a very short description",
+    description: "Tacos como nunca los has probado, tenemos de pastor, bisteck, cordero, etc",
     rating: 4.5
   },
   {
     id:2,
-    name: "Store2",
+    name: "Maco Cafe",
     city: "Queretaro",
     state: "Queretaro",
-    description: "This is a short description",
+    description: "Ofrecemos cafe artesanal y ricos panes hechos a mano, ven a conocernos",
     rating: 4.5
   },
   {
     id:3,
-    name: "Store3",
+    name: "Optica San Pablo",
     city: "Queretaro",
     state: "Queretaro",
-    description: "This is a short description",
+    description: "Nos dedicamos a cuidar tus ojos",
     rating: 4.5
   },
   {
     id:4,
-    name: "Store4",
+    name: "Aguacatosas",
     city: "Queretaro",
     state: "Queretaro",
-    description: "This is a short description",
+    description: "Las mejores hamburguesas de Queretaro, si nunca has probado una aguacatosa, no has vivido..",
     rating: 4.5
-  },
-  {
-    id:5,
-    name: "Store5",
-    city: "Queretaro",
-    state: "Queretaro",
-    description: "This is a short description",
   }
   
 ])
