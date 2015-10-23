@@ -1,9 +1,6 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<h3>
-				Mis tiendas
-			</h3>
 		</div>
 		
 		<div class="col-md-8">
@@ -12,7 +9,7 @@
 					<h3>
 						<%= @store.name %>
 					</h3>
-					<%= form_for([@store]) do |f| %>
+					<%= form_for @store, html: { multipart: true } do |f| %>
 
                     <div class="field">
                         <%= f.label :Nombre %><br>
@@ -34,9 +31,14 @@
                         <%= f.text_field :state, :class => "form-control" %><br>
                     </div>
 
+                    <div class="field">
+                    	 <%= f.file_field :image, as: :file %>
+                    </div>
+
                     <div class="actions">
                         <%= f.submit "Guardar", :class => "btn btn-default"%>
                     </div>
+
                     <% end %>
 				</div>
 				
