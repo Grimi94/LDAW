@@ -3,10 +3,10 @@
     <div class="row">
 
         <div class="col-md-12">
-            <p class="lead">New review</p>
+            <p class="lead"><%=t('reviews.new')%></p>
             <%= render 'form' %>
 
-            <%= link_to 'Back', store_path(@store) %>
+            <%= link_to t('reviews.back'), store_path(@store) %>
         </div>
 
     </div>

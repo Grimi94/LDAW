@@ -29,23 +29,25 @@
                 </div>
                 
                 <div class="ratings">
-                    <p class="pull-right"><%= "#{@reviews.length} reviews" %></p>
-                    <div class="star-rating" data-score= <%= @avg %>>Promedio: </div>
+                    <!--<p class="pull-right">< "#{@reviews.length} reviews" %></p>!-->
+                   <!-- <div class="star-rating" data-score= < @avg %>>Promedio: </div>-->
+                    <div class="star-rating" data-score= <%= @avg %>> <%= t('store.avg') %></div>
                 </div>
             </div>
             <div class="well">
 
                 <div class="text-right">
-                    <%= link_to "Leave a Review", new_store_review_path(@store), :class => "btn btn-success" %>
+                    <!--- link_to "Leave a Review", new_store_review_path(@store), :class => "btn btn-success" %>-->
+                    <%= link_to t('store.leave_rv'), new_store_review_path(@store), :class => "btn btn-success" %>
                 </div>
 
                 <hr>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h4>Reseñas</h4>
+                        <h4><%= t('store.review') %></h4>
                         <% if @reviews.blank? %>
-                            <p>No hay reseñas</p>
+                            <p><%= t('store.noReviews') %></p>
                         <% else %>
                             <% @reviews.each do |review| %>
                                 <div class="star-rating" data-score= <%= review.ratings %>>

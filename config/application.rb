@@ -23,5 +23,6 @@ module LDAW
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.assets.initialize_on_precompile = false
     config.active_record.raise_in_transactional_callbacks = true
+    I18n.available_locales = [:en, :es]
   end
 end

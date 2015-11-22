@@ -1,18 +1,18 @@
 
 <div class="col-lg-6">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="What are you looking for?">
+      <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: t('searchForm.question1') %>
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go</button>
+        <%= button_tag t('searchForm.go'), class: 'btn btn-default' %>
       </span>
     </div>
 </div><!-- col-->
 
 <div class="col-lg-6">
         <%= form_tag(search_path, :method => "get", class:'input-group') do %>
-        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "You already know the store?" %>
+        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: t('searchForm.question2') %>
         <span class="input-group-btn">
-            <%= button_tag "Go", class: 'btn btn-default' %>
+            <%= button_tag t('searchForm.go'), class: 'btn btn-default' %>
         </span>
         <% end %>    
 </div><!-- col-->

@@ -1,0 +1,66 @@
+en:
+  activerecord:
+    attributes:
+      article:
+        title: 
+        body: 
+        review: "Reseñas"
+  searchForm:
+    question1: "¿Qué estás buscando?"
+    question2: "¿Ya conoces la tienda?"
+    go: "Ir"
+    noStores: "No existe la(s) tienda(s):"
+  header:
+    index: "Inicio"
+    profile: "Perfil"
+    users: "Usuarios"
+    reviews: "Mis reseñas"
+    logout: "Cerrar sesión"
+    login: "Iniciar sesión"
+    signup: "Registrate"
+  profile:
+    edit: "Editar Perfil"
+    password: "Contraseña"
+    charactersPass: " caracteres mínimo"
+    passwordMsg: "Deja en blanco si no deseas cambiar tu contraseña"
+    passConfirmation: "Confirma tu nueva contraseña"
+    actualPass: "Contraseña actual"
+    actualPassMsg: "Necesitamos tu contraseña actual para confirmar tus cambios"
+    cancel: "Cancelar mi cuenta"
+    cancelMsg: "No esta feliz con su cuenta?"
+    new: "Registrate"
+    remember: "Recuérdame"
+    forgot: "¿Olvidaste tu contraseña?"
+    passReset: "Enviar instrucciones de password"
+    changePass: "Cambiar contraseña"
+    newPass: "Nueva contraseña"
+     passMail: 
+      0: "Alguien ha pedido un enlace para cambiar su contraseña. Puede hacer esto a través del siguiente enlace."
+      1: "Si no solicito este enlace, ignore este mensaje"
+      2: "Su contraseña no cambiará hasta que acceda al enlace anterior y cree una nueva."
+  store:
+    leave_rv: "Deja una reseña"
+    avg: "Promedio "
+    noReviews: "No hay reseñas"
+    review: "Reseñas"
+  reviews: 
+    new: "Nueva reseña"
+    back: "Regresar"
+    confirm: "¿Seguro que deseas eliminar esta reseña?"
+  forms:
+    messages:
+      success: "¡Operación exitosa!"
+      confirm: "¿Seguro?"
+    buttons:
+      edit: "Editar"
+      delete: "Eliminar"
+      submit: "Guardar"
+      email_confirmation:  "Reenviar instrucciones de confirmación"
+    label:
+      estate: "Estado"
+      city: "Ciudad"
+      description: "Descripción"
+      name: "Nombre"
+      content: "Contenido"
+    error:
+      review: "Prohibio que se guardara está reseña: "

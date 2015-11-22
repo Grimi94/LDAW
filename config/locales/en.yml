@@ -20,4 +20,67 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      article:
+        title: 
+        review: "Reviews"
+  searchForm:
+    question1: "What are you looking for?"
+    question2: "Already know the store?"
+    go: "Go"
+    noStores: "No match store results:"
+  header:
+    index: "Home"
+    profile: "Profile"
+    users: "Users"
+    reviews: "My reviews"
+    logout: "Log out"
+    login: "Log in"
+    signup: "Sign Up"
+  profile:
+    edit: "Edit Profile"
+    password: "Password"
+    charactersPass: " characters minimum"
+    passwordMsg: "Leave it blank if you don't want to change password"
+    passConfirmation: "Confirm your new password"
+    actualPass: "Actual password"
+    actualPassMsg: "We need you actual password to confirm password changes"
+    cancel: "Cancel my account"
+    cancelMsg: "Aren't yo happy with your account?"
+    new: "Sign Up"
+    remember: "Remember me"
+    forgot: "Forgot your password?"
+    passReset: "Send me reset password instructions"
+    changePass: "Change password"
+    newPass: "New password"
+    passMail: 
+      0: "Someone has requested a link to change your password. You can do this through the link below."
+      1: "If you didn't request this, please ignore this email."
+      2: "Your password won't change until you access the link above and create a new one."
+  store:
+    leave_rv: "Leave a review"
+    avg: "Average "
+    noReviews: "No reviews"
+    review: "Reviews"
+  reviews:
+    new: "New review"
+    back: "Back"
+    confirm: "Sure you want to delete this review?"
+  forms:
+    messages:
+      success: "Operation succeeded!"
+      confirm: "Are you sure?"
+    buttons:
+      edit: "Edit"
+      delete: "Delete"
+      submit: "Submit"
+      email_confirmation:  "Resend confirmation instructions"
+    label:
+      estate: "Estate"
+      city: "City"
+      description: "Description"
+      name: "Name"
+      content: "Content"
+    error:
+      review: "prohibited this review from being saved: "
