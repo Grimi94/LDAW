@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
   devise_for :users
   root             'static_pages#home'
   get 'userLogged'    => 'static_pages#userLogged'
   get 'search' => 'search#search'
   get 'allUsers' => 'users#index'
+  
   
   resources :stores do
     resources :reviews, except: [:show, :index] #para que reviews este detro de stores como /store/movie_id/reviews

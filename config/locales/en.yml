@@ -38,16 +38,17 @@ en:
     logout: "Log out"
     login: "Log in"
     signup: "Sign Up"
+    account: "Account"
   profile:
     edit: "Edit Profile"
     password: "Password"
     charactersPass: " characters minimum"
     passwordMsg: "Leave it blank if you don't want to change password"
-    passConfirmation: "Confirm your new password"
+    passConfirmation: "Confirm password"
     actualPass: "Actual password"
     actualPassMsg: "We need you actual password to confirm password changes"
     cancel: "Cancel my account"
-    cancelMsg: "Aren't yo happy with your account?"
+    cancelMsg: "Aren't you happy with your account?"
     new: "Sign Up"
     remember: "Remember me"
     forgot: "Forgot your password?"
@@ -84,3 +85,7 @@ en:
       content: "Content"
     error:
       review: "prohibited this review from being saved: "
+  menu: 
+    lang: "Language"
+    es: "Spanish"
+    en: "English"

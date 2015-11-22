@@ -41,7 +41,7 @@
     
     <div class="col-md-4">
       <h3><%=t('profile.cancel')%></h3>
-      <p><%=t('profile.cancelMsg')%> <%= button_to t('profile.cancel'), registration_path(resource_name), {class:"btn btn-default", data: { confirm: t('form.messages.confirm') }, method: :delete }%></p>
+      <p><%=t('profile.cancelMsg')%> <%= button_to t('profile.cancel'), registration_path(resource_name), {class:"btn btn-default", data: { confirm: I18n.t('forms.messages.confirm') }, method: :delete }%></p>
       <%= link_to t('reviews.back'), :back %>
     </div>  
   </div>

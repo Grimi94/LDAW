@@ -1,4 +1,4 @@
-en:
+es:
   activerecord:
     attributes:
       article:
@@ -18,23 +18,24 @@ en:
     logout: "Cerrar sesión"
     login: "Iniciar sesión"
     signup: "Registrate"
+    account: "Cuenta"
   profile:
     edit: "Editar Perfil"
     password: "Contraseña"
     charactersPass: " caracteres mínimo"
     passwordMsg: "Deja en blanco si no deseas cambiar tu contraseña"
-    passConfirmation: "Confirma tu nueva contraseña"
+    passConfirmation: "Confirma tu contraseña"
     actualPass: "Contraseña actual"
     actualPassMsg: "Necesitamos tu contraseña actual para confirmar tus cambios"
     cancel: "Cancelar mi cuenta"
-    cancelMsg: "No esta feliz con su cuenta?"
+    cancelMsg: "¿No estas feliz con la cuenta?"
     new: "Registrate"
     remember: "Recuérdame"
     forgot: "¿Olvidaste tu contraseña?"
     passReset: "Enviar instrucciones de password"
     changePass: "Cambiar contraseña"
     newPass: "Nueva contraseña"
-     passMail: 
+    passMail: 
       0: "Alguien ha pedido un enlace para cambiar su contraseña. Puede hacer esto a través del siguiente enlace."
       1: "Si no solicito este enlace, ignore este mensaje"
       2: "Su contraseña no cambiará hasta que acceda al enlace anterior y cree una nueva."
@@ -64,3 +65,7 @@ en:
       content: "Contenido"
     error:
       review: "Prohibio que se guardara está reseña: "
+  menu: 
+    lang: "Idiomas"
+    es: "Español"
+    en: "Inglés"
