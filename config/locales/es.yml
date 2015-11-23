@@ -70,3 +70,7 @@ es:
     lang: "Idiomas"
     es: "Español"
     en: "Inglés"
+  devise:
+    passwords:
+      user:
+        send_instructions:"Enviar instrucciones"
