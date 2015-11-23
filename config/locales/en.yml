@@ -80,6 +80,7 @@ en:
     label:
       estate: "Estate"
       city: "City"
+      street: "Street"
       description: "Description"
       name: "Name"
       content: "Content"

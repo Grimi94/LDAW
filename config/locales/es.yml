@@ -39,6 +39,7 @@ es:
       0: "Alguien ha pedido un enlace para cambiar su contraseña. Puede hacer esto a través del siguiente enlace."
       1: "Si no solicito este enlace, ignore este mensaje"
       2: "Su contraseña no cambiará hasta que acceda al enlace anterior y cree una nueva."
+      greeting: "Hola: "
   store:
     leave_rv: "Deja una reseña"
     avg: "Promedio "
@@ -60,6 +61,7 @@ es:
     label:
       estate: "Estado"
       city: "Ciudad"
+      street: "Calle"
       description: "Descripción"
       name: "Nombre"
       content: "Contenido"
