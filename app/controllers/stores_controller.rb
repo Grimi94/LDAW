@@ -3,6 +3,10 @@ class StoresController < ApplicationController
   def show
     @store = Store.find(params[:id])
     @reviews = Review.where(store_id: @store.id).order("created_at DESC")
+    @hash = Gmaps4rails.build_markers(@store) do |store, marker|
+      marker.lat store.latitude
+      marker.lng store.longitude
+    end
     
     if @reviews.blank?
       @avg = 0
@@ -39,7 +43,6 @@ class StoresController < ApplicationController
   
   private
   def store_params
-    #params.require(:store).permit(:name, :city, :state, :description)
-    params.require(:store).permit(:name, :city, :state, :description, :image)
+    params.require(:store).permit(:name, :city, :state, :street, :description, :image)
   end
 end

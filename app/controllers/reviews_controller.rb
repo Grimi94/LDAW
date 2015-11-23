@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
   end
   
   def index
-    @review = Review.where(user_id: current_user.id)
+    @review = Review.where(user_id: current_user.id).order("created_at DESC")
   end
 
   def edit
