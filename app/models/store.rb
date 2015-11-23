@@ -8,6 +8,6 @@ class Store < ActiveRecord::Base
         where("lower(name) LIKE ?", "%#{search.downcase}%") 
     end
     def address
-        "#{street}, #{city}, #{state}"
+        "#{self.street}, #{self.city}, #{self.state}"
     end
 end
