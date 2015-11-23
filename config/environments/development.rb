@@ -26,7 +26,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
   
-  config.action_mailer.default_url_options = {:host => 'ldaw-mpradoa941.c9users.io'}
+  #config.action_mailer.default_url_options = {:host => 'ldaw-mpradoa941.c9users.io'}
+  config.action_mailer.default_url_options = {:host => 'hazpatria.herokuapp.com'}
   config.action_mailer.delivery_method = :stmp
   config.action_mailer.perform_deliveries = true
 

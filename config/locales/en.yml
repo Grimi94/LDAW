@@ -89,3 +89,7 @@ en:
     lang: "Language"
     es: "Spanish"
     en: "English"
+  devise:
+    passwords:
+      user:
+        send_instructions: "Sending instructions..."
