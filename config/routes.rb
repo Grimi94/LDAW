@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root             'static_pages#home'
   get 'userLogged'    => 'static_pages#userLogged'
   get 'search' => 'search#search'
+  get 'search_name' => 'search#search_name'
+  post 'search_near' => 'search#search_near'
   get 'allUsers' => 'users#index'
   
   resources :stores do
