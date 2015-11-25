@@ -1,14 +1,25 @@
 <div class="container">
 
-
-          <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Tus tiendas
-                </h1>
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1 > 
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    Tus tiendas
+                                </div>
+                            <div class="col-sm-2">
+                                <%= link_to "Create Store", new_store_path, :class => "btn btn-default btn-sm"%>
+                            </div>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- /.row -->
+            <!-- /.row -->
 
         <% current_user.stores.each do |element| %>
             <div class="row">
@@ -35,6 +46,7 @@
             <hr>
 
         <% end %>
-    
+        </div>
+        </div>
 </div>
 
