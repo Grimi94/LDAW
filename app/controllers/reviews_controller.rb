@@ -3,9 +3,9 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_store, except: [:index, :destroy]
 
-
   def new
     @review = Review.new
+    
   end
   
   def index
@@ -17,10 +17,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    if(!review_params[:ratings])
+     flash.now[:danger] = 'Invalid email/password combination'
+     review_params[:ratings] 
+    end
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     @review.store_id = @store.id
-
+    
     respond_to do |format|
       if @review.save
         format.html { redirect_to @store, notice: 'Review was successfully created.' }
@@ -39,6 +43,7 @@ class ReviewsController < ApplicationController
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit }
+        flash[:error] = "Action failed"
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end
@@ -62,6 +67,8 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-      params.require(:review).permit(:ratings, :content)
+      params.require(:review).permit(:content, :ratings)
     end
+    
+
 end
