@@ -34,8 +34,7 @@ class StoresController < ApplicationController
       if @store.update_attributes(store_params)
       
       flash[:success] = "Profile updated"
-      render 'edit'
-      
+      render 'show'
       else
       render 'edit'
       end
@@ -43,6 +42,6 @@ class StoresController < ApplicationController
   
   private
   def store_params
-    params.require(:store).permit(:name, :city, :state, :street, :description, :image)
+    params.require(:store).permit(:name, :city, :state, :street, :description, :tag_list, :image)
   end
 end
