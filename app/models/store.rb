@@ -7,6 +7,7 @@ class Store < ActiveRecord::Base
     geocoded_by :address
     after_validation :geocode
     
+    
     def self.search(search)
         where("lower(name) LIKE ?", "%#{search.downcase}%") 
     end
@@ -15,8 +16,11 @@ class Store < ActiveRecord::Base
     end
     
     def self.tagged_with(name)
-        Tag.find_by_name!(name).stores
-
+        begin
+          Tag.find_by_name!(name).stores
+          rescue
+        end
+        
     end
     
       def self.tag_counts
