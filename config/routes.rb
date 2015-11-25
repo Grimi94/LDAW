@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'userLogged'    => 'static_pages#userLogged'
   get 'search' => 'search#search'
   get 'allUsers' => 'users#index'
+  get 'mystores' => 'users#mystores'
   
   resources :stores do
     resources :reviews, except: [:show, :index] #para que reviews este detro de stores como /store/movie_id/reviews
