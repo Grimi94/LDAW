@@ -50,6 +50,7 @@ es:
     back: "Regresar"
     confirm: "¿Seguro que deseas eliminar esta reseña?"
     edit: "Editar reseña"
+    review: "Reseñas"
   forms:
     messages:
       success: "¡Operación exitosa!"

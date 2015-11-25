@@ -6,12 +6,6 @@
 
         <div class="col-md-3">
             <p class="lead"><%= @store.name%></p>
-            <div class="list-group">
-            <a href="#" class="list-group-item active">Tags</a>
-                <% @store.tags.each do |element| %>
-                    <a href="#" class="list-group-item">#<%= element.name %></a>
-                <% end %>
-            </div>
             <div>
               <div id="map" style='width: 250px; height: 250px;'></div>
               <script>
@@ -20,9 +14,18 @@
                       markers = handler.addMarkers(<%=raw @hash.to_json %>);
                       handler.bounds.extendWith(markers);
                       handler.fitMapToBounds();
+                      handler.getMap().setZoom(15);
                     });
               </script>
             </div>
+            <br>
+            <div class="list-group">
+            <a href="#" class="list-group-item active">Tags</a>
+                <% @store.tags.each do |element| %>
+                    <a href="#" class="list-group-item">#<%= element.name %></a>
+                <% end %>
+            </div>
+            
         </div>
 
         <div class="col-md-9">

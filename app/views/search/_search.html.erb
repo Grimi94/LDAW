@@ -20,10 +20,11 @@
                                 <div class="caption">
                                         <h4><%= link_to store.name, store%></h4>
                                         <p><%= store.description %></p>
+                                        <div class="ratings">
+                                            <p class="pull-right"><%= "#{store.reviews.length}  "%><%= t('reviews.review') %></p>
+                                        </div>
                                 </div>
-                                <div class="ratings">
-                                    <p class="pull-right"><%= "#{store.reviews.length}  "%><%= t('reviews.review') %></p>
-                                </div>
+                                
                             </div>
                         </div>
                     <% end %>
