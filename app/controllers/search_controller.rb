@@ -1,10 +1,19 @@
 class SearchController < ApplicationController
-  def search
-    @stores = Store.all
-    if params[:search]
-    @stores = Store.search(params[:search]).order("created_at DESC")
+  
+  def search_name
+    @stores = Store.all.order('created_at DESC')
+    if params[:search_name]
+    @stores = Store.search(params[:search_name]).order("created_at DESC")
     else
     @stores = Store.all.order('created_at DESC')
+    end
+  end
+  
+  def search_tag
+    if params[:search_tag]
+      @stores = Store.tagged_with(params[:search_tag])
+    else
+      @stores = Store.all('created_at DESC')
     end
   end
   
