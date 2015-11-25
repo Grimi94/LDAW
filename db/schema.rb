@@ -37,10 +37,13 @@ ActiveRecord::Schema.define(version: 20151125033252) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "user_id"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "street"
   end
+
+  add_index "stores", ["user_id"], name: "index_stores_on_user_id", using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -77,6 +80,7 @@ ActiveRecord::Schema.define(version: 20151125033252) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "stores", "users"
   add_foreign_key "taggings", "stores"
   add_foreign_key "taggings", "tags"
 end
