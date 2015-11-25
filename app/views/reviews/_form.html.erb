@@ -14,15 +14,16 @@
 <% end %>
   
   <div class="field">
+    <%= f.label  'Ratings'%><br>
     <div id="star-rating"></div>
   </div>
   <div class="field">
-    <%= f.label  t('forms.label.content') %><br>
-    <%= f.text_area :content %><br>
+    <%= f.label  t('forms.label.content')%><br>
+    <%= f.text_area :content, :class => "form-control" %><br>
   </div>
   <div class="actions">
 
-    <%= f.submit t('forms.buttons.submit')%>
+    <%= f.submit t('forms.buttons.submit'), :class => "btn btn-default"%>
   </div>
 <% end %>
 
