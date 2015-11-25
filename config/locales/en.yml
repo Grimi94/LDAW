@@ -60,6 +60,10 @@ en:
       1: "If you didn't request this, please ignore this email."
       2: "Your password won't change until you access the link above and create a new one."
   store:
+    create: "Create New Store"
+    name: "Name"
+    description: "Description"
+    new: "Create"
     leave_rv: "Leave a review"
     avg: "Average "
     noReviews: "No reviews"

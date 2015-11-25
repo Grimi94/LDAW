@@ -41,6 +41,10 @@ es:
       2: "Su contraseña no cambiará hasta que acceda al enlace anterior y cree una nueva."
       greeting: "Hola: "
   store:
+    create: "Crear Nueva Tienda"
+    name: "Nombre"
+    description: "Descripcion"
+    new: "Crear"
     leave_rv: "Deja una reseña"
     avg: "Promedio "
     noReviews: "No hay reseñas"
