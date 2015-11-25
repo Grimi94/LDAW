@@ -61,6 +61,14 @@ class StoresController < ApplicationController
       
   end
   
+  def destroy
+    @store.destroy
+    respond_to do |format|
+      format.html { redirect_to mystores_path, notice: 'Store was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
+  
   private
   def set_store
       @store = Store.find(params[:id])
