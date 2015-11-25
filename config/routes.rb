@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   root             'static_pages#home'
   get 'userLogged'    => 'static_pages#userLogged'
-  get 'search' => 'search#search'
+  get 'search_name' => 'search#search_name'
+  get 'search_tag' => 'search#search_tag'
   get 'allUsers' => 'users#index'
   
   resources :stores do
