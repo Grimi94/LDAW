@@ -15,7 +15,7 @@
                       handler.bounds.extendWith(markers);
                       handler.fitMapToBounds();
                       handler.getMap().setZoom(15);
-                    });
+                    })
               </script>
             </div>
             <br>
@@ -52,9 +52,9 @@
             <div class="well">
 
                 <div class="text-right">
-                    <!--- link_to "Leave a Review", new_store_review_path(@store), :class => "btn btn-success" %>-->
-                    
-                    <%= link_to t('store.leave_rv'), new_store_review_path(@store), :class => "btn btn-success" %>
+                    <% if @store.user_id != current_user.id %>
+                        <%= link_to t('store.leave_rv'), new_store_review_path(@store), :class => "btn btn-success" %>
+                    <% end %>
                 </div>
 
                 <hr>
