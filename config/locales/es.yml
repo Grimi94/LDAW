@@ -61,6 +61,7 @@ es:
     label:
       estate: "Estado"
       city: "Ciudad"
+      street: "Calle"
       description: "Descripción"
       name: "Nombre"
       content: "Contenido"
