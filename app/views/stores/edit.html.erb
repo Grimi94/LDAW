@@ -20,10 +20,6 @@
                             <%= f.label t('forms.label.description') %><br>
                             <%= f.text_area :description %><br>
                         </div>
-                        <div class="field">
-                            <%= f.label t('forms.label.street') %><br>
-                            <%= f.text_field :street, :class => "form-control" %><br>
-                        </div>
 
                         <div class="field">
                             <%= f.label t('forms.label.city') %><br>
@@ -34,6 +30,16 @@
                             <%= f.label t('forms.label.estate') %><br>
                             <%= f.text_field :state, :class => "form-control" %><br>
                         </div>
+
+                        <div class="field">
+                            <%= f.label t('forms.label.street') %><br>
+                            <%= f.text_field :street, :class => "form-control" %><br>
+                        </div>
+
+                        <div class="field">
+                            <%= f.label :tag, "Tags (separated by commas)" %><br />
+                            <%= f.text_field :tag_list, :class => "form-control" %>
+                        </div><br>
 
                         <div class="field">
                             <%= f.file_field :image, as: :file %>
@@ -54,7 +60,9 @@
                     </div>
                     <div class="panel-body">
                         Panel content
+                        Reviews
                     </div>
+
                 </div>
 
             </div>
