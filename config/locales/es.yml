@@ -49,6 +49,7 @@ es:
     new: "Nueva reseña"
     back: "Regresar"
     confirm: "¿Seguro que deseas eliminar esta reseña?"
+    edit: "Editar reseña"
   forms:
     messages:
       success: "¡Operación exitosa!"
@@ -75,3 +76,14 @@ es:
     passwords:
       user:
         send_instructions: "Enviando instrucciones..."
+    sessions:
+      user:
+        signed_out: "Sesión terminada"
+        signed_in: "Bienvenido"
+    failure:
+      invalid: "Usuario inválido"
+      user:
+        not_found_in_database: "Usuario no registrado (Verifica tu información)"
+  errors:
+    messages:
+      not_saved: "Estos errores no permitieron que el usuario fuera guardado: "
