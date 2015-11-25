@@ -19,6 +19,7 @@ es:
     login: "Iniciar sesión"
     signup: "Registrate"
     account: "Cuenta"
+    mystores: "Mis Tiendas"
   profile:
     edit: "Editar Perfil"
     password: "Contraseña"
