@@ -80,10 +80,7 @@ ActiveRecord::Schema.define(version: 20151124072230) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-<<<<<<< HEAD
   add_foreign_key "stores", "users"
-=======
   add_foreign_key "taggings", "stores"
   add_foreign_key "taggings", "tags"
->>>>>>> 8aa19f984287a2824b734771b5e1b3de2721336e
 end
