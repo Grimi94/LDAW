@@ -81,7 +81,8 @@ es:
         signed_out: "Sesión terminada"
         signed_in: "Bienvenido"
     failure:
-      invalid: "Usuario inválido"
+      invalid: "Operación inválida"
+      unauthenticated: "Debes registrarte para continuar"
       user:
         not_found_in_database: "Usuario no registrado (Verifica tu información)"
   errors:

@@ -41,9 +41,6 @@ class StoresController < ApplicationController
       if @store.update(store_params)
         format.html { redirect_to @store, notice: 'Store was successfully updated.' }
         format.json { render :show, status: :ok, location: @store }
-      flash[:success] = "Profile updated"
-      render 'show'
-
       else
         format.html { render :edit }
         format.json { render json: @store.errors, status: :unprocessable_entity }
