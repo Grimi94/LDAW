@@ -19,7 +19,18 @@ class StoresController < ApplicationController
       format.xml {render :xml => @product}
     end
   end
+
+  def new
+    @store = Store.new
+  end
   
+  def create
+    @store = current_user.stores.create(store_params)
+    
+    redirect_to @store
+    
+  end
+
   def edit
     @store = Store.find(params[:id])
 
