@@ -1,0 +1,28 @@
+<%= form_for(@store) do |f| %>
+    <% if @store.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@store.errors.count, "error") %> <%= t('forms.error.review:') %></h2>
+
+            <ul>
+                <% @store.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+        <%= f.label  :name %><br>
+        <%= f.text_field :name %><br>
+    </div>
+
+    <div class="field">
+        <%= f.label  :descriptio n%><br>
+        <%= f.text_area :description %><br>
+    </div>
+
+    <div class="actions">
+        <%= f.submit t('store.new'), :class => "btn btn-default" %>
+    </div>
+<% end %>
+
