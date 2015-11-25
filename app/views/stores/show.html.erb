@@ -35,8 +35,9 @@
                 <% end %>
                 
                 <div class="caption-full">
-                    <h4><a href="#"><%= @store.name%></a>
-                    </h4>
+                    <h4><a href="#"><%= @store.name%></a></h4>
+                    <!--Tags: < raw store.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>-->
+                    Tags: <%= raw @store.tags.map(&:name).map { |t| t }.join(', ') %>
                     <p><%= @store.description %></p>
                 </div>
                 

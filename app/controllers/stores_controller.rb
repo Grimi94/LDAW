@@ -41,6 +41,9 @@ class StoresController < ApplicationController
       if @store.update(store_params)
         format.html { redirect_to @store, notice: 'Store was successfully updated.' }
         format.json { render :show, status: :ok, location: @store }
+      flash[:success] = "Profile updated"
+      render 'show'
+
       else
         format.html { render :edit }
         format.json { render json: @store.errors, status: :unprocessable_entity }
@@ -56,6 +59,6 @@ class StoresController < ApplicationController
   end
   
   def store_params
-    params.require(:store).permit(:name, :city, :state, :street, :description, :image)
+    params.require(:store).permit(:name, :city, :state, :street, :description, :tag_list, :image)
   end
 end
