@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-  before_action :set_store, only: [:show, :edit, :update, :destroy, :approve]
+  before_action :set_store, only: [:show, :edit, :update, :destroy]
   def show
     @reviews = Review.where(store_id: @store.id).order("created_at DESC")
     
@@ -21,8 +21,8 @@ class StoresController < ApplicationController
   end
   
   def approveStores
-    #@store = Store.pending
-    @store = Store.all
+    @store = Store.pending
+    #@store = Store.all
   end
   
   def approve
