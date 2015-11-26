@@ -51,6 +51,13 @@ es:
     avg: "Promedio "
     noReviews: "No hay reseñas"
     review: "Reseñas"
+  mystores:
+    stores: 'Tus Tiendas'
+    new: 'Crear Tienda'
+    view: 'Ver Tienda'
+    edit: 'Editar tienda'
+    delete: 'Borrar Tienda'
+    approval: 'En espera de aprobación'
   reviews: 
     new: "Nueva reseña"
     back: "Regresar"
