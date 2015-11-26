@@ -35,19 +35,6 @@ class StoresController < ApplicationController
   end
   
   def update
-    
-    #puts store_params
-    
-    #params
-      #if @store.update_attributes(store_params)
-      
-      #flash[:success] = "Profile updated"
-      #render 'edit'
-      
-      #else
-      #render 'edit'
-      #end
-      
     respond_to do |format|
       if @store.update(store_params)
         format.html { redirect_to @store, notice: 'Store was successfully updated.' }
