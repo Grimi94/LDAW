@@ -16,7 +16,8 @@ Store.create!([
     city: "Queretaro",
     state: "Queretaro",
     description: "Tacos como nunca los has probado, tenemos de pastor, bisteck, cordero, etc",
-    rating: 4.5
+    rating: 4.5,
+    approved: false
   },
   {
     id:2,
@@ -24,7 +25,8 @@ Store.create!([
     city: "Queretaro",
     state: "Queretaro",
     description: "Ofrecemos cafe artesanal y ricos panes hechos a mano, ven a conocernos",
-    rating: 4.5
+    rating: 4.5,
+    approved: false
   },
   {
     id:3,
@@ -32,7 +34,8 @@ Store.create!([
     city: "Queretaro",
     state: "Queretaro",
     description: "Nos dedicamos a cuidar tus ojos",
-    rating: 4.5
+    rating: 4.5,
+    approved: false
   },
   {
     id:4,
@@ -40,7 +43,8 @@ Store.create!([
     city: "Queretaro",
     state: "Queretaro",
     description: "Las mejores hamburguesas de Queretaro, si nunca has probado una aguacatosa, no has vivido..",
-    rating: 4.5
+    rating: 4.5,
+    approved: false
   }
   
 ])
