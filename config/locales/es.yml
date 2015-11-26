@@ -11,7 +11,7 @@ es:
     go: "Ir"
     noStores: "No existe la(s) tienda(s):"
   header:
-    title: "Haz patria"
+    title: "Haz Patria"
     index: "Inicio"
     profile: "Perfil"
     users: "Usuarios"
