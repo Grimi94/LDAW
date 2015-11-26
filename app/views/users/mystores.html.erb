@@ -1,3 +1,8 @@
+<style>
+img {
+    max-height: 170px;
+}
+</style>
 <div class="container">
 
     <div class="row">
@@ -23,10 +28,10 @@
 
         <% current_user.stores.each do |element| %>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <a href="#">
                         <% if element.image.presence %>
-                            <img class="img-responsive" src="<%= element.image.url %>" alt="">
+                            <img class="img-responsive center-block" src="<%= element.image.url %>" alt="">
                         <% else %>
                             <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                         <% end %>
