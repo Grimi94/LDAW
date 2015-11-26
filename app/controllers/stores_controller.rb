@@ -21,7 +21,10 @@ class StoresController < ApplicationController
   end
   
   def approve
-    @store = Store.find(params[:id]).update_attribute(:approved, true) 
+    @store = Store.find(params[:format])
+    @store.update_attribute(:approved, true)
+    @store.save
+    redirect_to @store
   end
 
   def new
