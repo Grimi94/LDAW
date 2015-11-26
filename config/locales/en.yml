@@ -39,6 +39,7 @@ en:
     login: "Log in"
     signup: "Sign Up"
     account: "Account"
+    mystores: "My Stores"
   profile:
     edit: "Edit Profile"
     password: "Password"
