@@ -1,7 +1,7 @@
 class Store < ActiveRecord::Base
     #before_action :verify_is_approved, only: [:index]
     has_many :reviews
-    has_many :taggings
+    has_many :taggings, dependent: :destroy
     has_many :tags, through: :taggings
     has_attached_file :image, styles: {large: "800x300>", medium: "320x150>", thumb: "100x100#" }, default_url: "/images/:style/missing.png"
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
