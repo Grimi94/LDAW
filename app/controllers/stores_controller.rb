@@ -26,8 +26,10 @@ class StoresController < ApplicationController
   end
   
   def approve
-    @store = Store.update_attribute(:approved, true) 
+    @store = Store.find(params[:format])
+    @store.update_attribute(:approved, true)
     @store.save
+    redirect_to @store
   end
 
   def new
@@ -45,19 +47,6 @@ class StoresController < ApplicationController
   end
   
   def update
-    
-    #puts store_params
-    
-    #params
-      #if @store.update_attributes(store_params)
-      
-      #flash[:success] = "Profile updated"
-      #render 'edit'
-      
-      #else
-      #render 'edit'
-      #end
-      
     respond_to do |format|
       if @store.update(store_params)
         format.html { redirect_to @store, notice: 'Store was successfully updated.' }
@@ -69,6 +58,14 @@ class StoresController < ApplicationController
     end  
       
       
+  end
+  
+  def destroy
+    @store.destroy
+    respond_to do |format|
+      format.html { redirect_to mystores_path, notice: 'Store was successfully deleted.' }
+      format.json { head :no_content }
+    end
   end
   
   private

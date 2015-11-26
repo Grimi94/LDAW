@@ -14,6 +14,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><%= link_to  t('header.index'), root_path %></li>
+                    <li><%= link_to  t('aboutus.title'), aboutUs_path %></li>
                     <% if user_signed_in? %>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -27,6 +28,7 @@
                           <% else %>
                             <li><%= link_to t('header.reviews'), user_reviews_path(current_user) %></li>
                           <% end %>
+                          <li><%= link_to  t('header.mystores'), mystores_path %></li>
                           <li class="divider"></li>
                           <li><%= link_to(t('header.logout'), destroy_user_session_path, :method => :delete) %> </li>
                         </ul>

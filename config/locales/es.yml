@@ -19,6 +19,7 @@ es:
     login: "Iniciar sesión"
     signup: "Registrate"
     account: "Cuenta"
+    mystores: "Mis Tiendas"
     stores: "Aprobar tiendas"
   profile:
     edit: "Editar Perfil"
@@ -94,3 +95,12 @@ es:
   errors:
     messages:
       not_saved: "Estos errores no permitieron que el usuario fuera guardado: "
+  aboutus:
+    title: "Sobre nosotros"
+    description: "Haz Patria nace a partir de la idea de apoyarnos como comunidades para lograr vencer los retos externos como un equipo, en este caso por medio del apoyo que podemos darnos entre clientes y comerciantes dando preferencia en el consumo de productos y primas locales para vencer a los monopolios que drenan la economía del país. Haz patria busca un compromiso de sus usuarios con su país."
+    contactlbl: "Contacto"
+    contactp: "¿Tienes alguna duda? no dudes en contactarnos a nuestro correo hazpatria.team@gmail.com será nuestro placer brindarte información."
+    takeactionlbl: "Toma acción"
+    takeactionp: "Se parte del equipo, registrate para conocer más y que la gente te conozca."
+    makemotherlandlbl: "Haz patria"
+    makemotherlandp: "Tu acción cuenta, se parte del cambio que quieres ver en tu comunidad y apoya a un proyecto que te apoya."

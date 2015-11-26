@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 20151126011411) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "user_id"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "street"
-    t.integer  "user_id"
     t.boolean  "approved",           default: false
   end
 
