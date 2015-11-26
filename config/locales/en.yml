@@ -31,6 +31,7 @@ en:
     go: "Go"
     noStores: "No match store results:"
   header:
+    title: "Making Motherland"
     index: "Home"
     profile: "Profile"
     users: "Users"
