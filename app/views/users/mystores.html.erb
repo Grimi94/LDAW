@@ -9,10 +9,10 @@
                         <h1 > 
                             <div class="row">
                                 <div class="col-sm-10">
-                                    Tus tiendas
+                                    <%= t('mystores.stores') %>
                                 </div>
                             <div class="col-sm-2">
-                                <%= link_to "Create Store", new_store_path, :class => "btn btn-default btn-sm"%>
+                                <%= link_to t('mystores.new'), new_store_path, :class => "btn btn-default btn-sm"%>
                             </div>
                             </div>
                         </h1>
@@ -34,13 +34,13 @@
                 </div>
                 <div class="col-md-5">
                 
-                    <h3><%= element.name %> <% if element.approved == false %> <span class="label label-warning">Pending Approval</span> <% end %></h3>
+                    <h3><%= element.name %> <% if element.approved == false %> <span class="label label-warning"> <%= t('mystores.approval') %></span> <% end %></h3>
                     <hr>
                     <p><%= element.description %></p>
                     <div style="display:inline-block;">
-                        <%= link_to "View Store", element, :class => "btn btn-default btn-sm"%>
-                        <%= link_to "Edit Store", edit_store_path(element), :class => "btn btn-info btn-sm"%>
-                        <%= link_to "Delete Store", store_path(element), :class => "btn btn-danger btn-sm", method: :delete, data: {confirm: "Are you sure?"}%>
+                        <%= link_to t('mystores.view'), element, :class => "btn btn-default btn-sm"%>
+                        <%= link_to t('mystores.edit'), edit_store_path(element), :class => "btn btn-info btn-sm"%>
+                        <%= link_to t('mystores.delete'), store_path(element), :class => "btn btn-danger btn-sm", method: :delete, data: {confirm: "Are you sure?"}%>
                     </div>
                 </div>
             </div>
