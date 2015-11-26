@@ -49,6 +49,8 @@ class StoresController < ApplicationController
   def update
     respond_to do |format|
       if @store.update(store_params)
+        @store.approved = false
+        @store.save
         format.html { redirect_to @store, notice: 'Store was successfully updated.' }
         format.json { render :show, status: :ok, location: @store }
       else
