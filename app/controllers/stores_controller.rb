@@ -1,5 +1,7 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
+  before_action :verify_ownership, only: [:edit, :destroy]
+
   def show
     @reviews = Review.where(store_id: @store.id).order("created_at DESC")
     
@@ -77,5 +79,11 @@ class StoresController < ApplicationController
   
   def store_params
     params.require(:store).permit(:name, :city, :state, :street, :description, :tag_list, :image)
+  end
+
+  def verify_ownership
+    unless current_user.stores.include?(@store)
+      redirect_to(root_path)
+    end
   end
 end
