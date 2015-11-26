@@ -5,4 +5,7 @@ class StaticPagesController < ApplicationController
 
   def userLogged
   end
+  
+  def aboutUs
+  end
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
   devise_for :users
   root             'static_pages#home'
+  get 'aboutUs' => 'static_pages#aboutUs'
   get 'userLogged'    => 'static_pages#userLogged'
   get 'search_name' => 'search#search_name'
   get 'search_tag' => 'search#search_tag'

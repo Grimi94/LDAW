@@ -101,3 +101,13 @@ en:
     passwords:
       user:
         send_instructions: "Sending instructions..."
+  aboutus:
+    title: "About us:"
+    description: "Making motherland is born from the idea of communities supporting themselves to overcome external challenges as a team; in this case the support the duo of merchant and client can achieve giving preference into buying local products and raw materials from the zone before big branded minorist stores that drain the contry's economy. Making motherland looks for the commitment of its members tod their country."
+    contactlbl: "Contact"
+    contactp: "Do you have a doubt? don't hesitate on contacting us via mail: hazpatria.team@gmail.com it will be our pleasure to grant you information."
+    takeactionlbl: "Take action!"
+    takeactionp: "Be part of the team, register to find out more and let people know you."
+    makemotherlandlbl: "Make motherland!"
+    makemotherlandp: "Your action counts, be part of the change you want to see in your community and support a project that supports you."
+
