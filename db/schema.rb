@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125033252) do
+ActiveRecord::Schema.define(version: 20151126011411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20151125033252) do
     t.string   "state"
     t.string   "description"
     t.float    "rating"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20151125033252) do
     t.float    "longitude"
     t.string   "street"
     t.integer  "user_id"
+    t.boolean  "approved",           default: false
   end
 
   add_index "stores", ["user_id"], name: "index_stores_on_user_id", using: :btree

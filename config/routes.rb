@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'search_name' => 'search#search_name'
   get 'search_tag' => 'search#search_tag'
   get 'allUsers' => 'users#index'
+  get 'approveStores' => 'users#approveStores'
+  get 'approve' => 'stores#approve'
   get 'mystores' => 'users#mystores'
   
   resources :stores do

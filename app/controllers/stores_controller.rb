@@ -19,6 +19,10 @@ class StoresController < ApplicationController
       format.xml {render :xml => @product}
     end
   end
+  
+  def approve
+    @store = Store.find(params[:id]).update_attribute(:approved, true) 
+  end
 
   def new
     @store = Store.new
@@ -26,7 +30,7 @@ class StoresController < ApplicationController
   
   def create
     @store = current_user.stores.create(store_params)
-    
+    @store.approved = false
     redirect_to @store
     
   end

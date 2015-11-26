@@ -40,6 +40,7 @@ en:
     signup: "Sign Up"
     account: "Account"
     mystores: "My Stores"
+    stores: "Approve stores"
   profile:
     edit: "Edit Profile"
     password: "Password"

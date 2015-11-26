@@ -3,14 +3,13 @@
     <div class="row">
         <div class="row">
             <div class="col-md-12">
-                <h2><%= t('header.users') %></h2>
+                <h2><%= t('header.stores') %></h2>
                 <ul class="list-group">
-                    <% @users.each do |user| %>
+                    <% @store.each do |store| %>
                         <li class="list-group-item">
-                            <%= user.email%>
+                            <%= link_to store.name, store%>
                             <span class="pull-right">
-                            <%= link_to t('forms.buttons.delete'), user, method: :delete,
-                                      data: { confirm:  t('forms.messages.confirm') } %>
+                             <%= link_to t('header.stores'), approve_path(store)%>
                             </span>
                         </li>
                     <% end %>
