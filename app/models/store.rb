@@ -1,4 +1,5 @@
 class Store < ActiveRecord::Base
+    #before_action :verify_is_approved, only: [:index]
     has_many :reviews
     has_many :taggings
     has_many :tags, through: :taggings
@@ -13,6 +14,7 @@ class Store < ActiveRecord::Base
     def self.search(search)
         where("lower(name) LIKE ?", "%#{search.downcase}%") 
     end
+    
     def address
         "#{self.street}, #{self.city}, #{self.state}"
     end

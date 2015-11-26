@@ -19,6 +19,7 @@ es:
     login: "Iniciar sesión"
     signup: "Registrate"
     account: "Cuenta"
+    stores: "Aprobar tiendas"
   profile:
     edit: "Editar Perfil"
     password: "Contraseña"

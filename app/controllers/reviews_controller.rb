@@ -69,6 +69,5 @@ class ReviewsController < ApplicationController
     def review_params
       params.require(:review).permit(:content, :ratings)
     end
-    
 
 end
