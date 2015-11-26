@@ -5,11 +5,6 @@ class UsersController < ApplicationController
     @users = User.where("id != ?", current_user.id)
   end
   
-  def approveStores
-    #@store = Store.all.where("approved = false")
-    @store = Store.all
-  end
-  
   def destroy
     @users = User.find(params[:id])
     @users.destroy

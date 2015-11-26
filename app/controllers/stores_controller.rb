@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-  before_action :set_store, only: [:show, :edit, :update, :destroy]
+  before_action :set_store, only: [:show, :edit, :update, :destroy, :approve]
   def show
     @reviews = Review.where(store_id: @store.id).order("created_at DESC")
     
@@ -20,8 +20,13 @@ class StoresController < ApplicationController
     end
   end
   
+  def approveStores
+    #@store = Store.all.where("approved = false")
+    @store = Store.all
+  end
+  
   def approve
-    @store = Store.find(params[:id]).update_attribute(:approved, true) 
+    @store = Store.update_attribute(:approved, true) 
   end
 
   def new

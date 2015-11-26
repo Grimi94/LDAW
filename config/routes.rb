@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get 'search_name' => 'search#search_name'
   get 'search_tag' => 'search#search_tag'
   get 'allUsers' => 'users#index'
-  get 'approveStores' => 'users#approveStores'
+  get 'approveStores' => 'stores#approveStores'
+  put 'approveStores' => 'stores#approveStores'
   get 'approve' => 'stores#approve'
   get 'mystores' => 'users#mystores'
   
