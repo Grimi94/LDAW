@@ -10,7 +10,8 @@ class Store < ActiveRecord::Base
     geocoded_by :address
     after_validation :geocode
     
-    
+    scope :approved, -> {where(:approved => true)}
+    scope :pending, -> {where(:approved => false)}
     def self.search(search)
         where("lower(name) LIKE ?", "%#{search.downcase}%") 
     end

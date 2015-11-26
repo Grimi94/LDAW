@@ -21,12 +21,13 @@ class StoresController < ApplicationController
   end
   
   def approveStores
-    #@store = Store.all.where("approved = false")
+    #@store = Store.pending
     @store = Store.all
   end
   
   def approve
     @store = Store.update_attribute(:approved, true) 
+    @store.save
   end
 
   def new
